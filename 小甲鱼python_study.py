@@ -156,3 +156,77 @@ def my_function(fname):
 my_function("Rory John")
 my_function("Jennifer Katharine")
 my_function("Phoebe Adele")
+
+class MyNumbers:
+  def __iter__(self):
+    self.a = 1
+    return self
+
+  def __next__(self):
+    x = self.a
+    self.a += 1
+    return x
+
+myclass = MyNumbers()
+myiter = iter(myclass)
+
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+
+import re
+
+import re
+
+str = "The rain in Spain falls mainly in the plain!"
+
+#Check if the string contains "ai" followed by 0 or more "x" characters:
+
+x = re.findall("aix*", str)
+
+print(x)
+
+if (x):
+  print("Yes, there is at least one match!")
+else:
+  print("No match")
+
+str = "The rallin in Spain falls mainly in the plain!"
+
+#Check if the string contains "a" followed by exactly two "l" characters:
+
+x = re.findall("al{2}", str)
+
+print(x)
+
+if (x):
+  print("Yes, there is at least one match!")
+else:
+  print("No match")
+
+import re
+
+str = "hello jhgm world uj6 kkworld"
+
+#Check if the string ends with 'world':
+
+x = re.findall("world$", str)
+print(x)
+if (x):
+  print("Yes, the string ends with 'world'")
+else:
+  print("No match")
+
+import re
+
+str = "China is a C great country"
+x = re.search(r"\bC\w*", str,)
+print(x.group())
+
+
+if (x):
+  print("Yes, there is a match!")
+else:
+  print("No match")
